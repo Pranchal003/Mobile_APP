@@ -1,0 +1,53 @@
+## Other tools to install (not from `pip`)
+
+| Install | Purpose |
+|--------|---------|
+| **Python 3.10+** | Flask backend (`backend/app.py`) |
+| **Node.js (LTS) + npm** | Expo frontend in `frontend/` |
+| **FFmpeg** (on **PATH**) | Audio decode/convert for **pydub** in the Flask upload flow |
+| **Google Chrome** | Only if you run the Selenium automation (`backend/main.py`) |
+
+---
+
+## Commands — backend (Flask, port **5001**)
+
+From the **repo root** (where `requirements.txt` is):
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+cd backend
+python app.py
+```
+
+---
+
+## Commands — backend (optional Node API)
+
+```powershell
+cd backend
+npm install
+npm start
+```
+
+(`npm start` → `node server.js`. Different stack/port than Flask; your Expo app may still target **5001** in `Backend.ts`.)
+
+---
+
+## Commands — frontend (Expo)
+
+```powershell
+cd frontend
+npm install
+npx expo start --web
+```
+
+---
+
+## Typical order
+
+1. **Terminal 1:** venv → `pip install -r requirements.txt` → `cd backend` → `python app.py`  
+2. **Terminal 2:** `cd frontend` → `npm install` (once) → `npx expo start --web`
+
+**Phone on Wi‑Fi:** use your PC’s LAN IP in `frontend/constants/Backend.ts` with port **5001**, not `localhost`.
