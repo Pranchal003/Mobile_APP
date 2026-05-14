@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "eas-cli": "^16.8.0"
+  },
+  "scripts": {
+  "postinstall": "patch-package"
+}
+}

@@ -1,0 +1,24 @@
+# Report data file for automation script
+# Format: key=value (one per line)
+# Lines starting with # are comments
+
+# Required fields
+created_date=2024-01-15
+project_id=828
+type=Project
+report_type=Daily Plan
+task=Sample Task
+description=This is a sample task description
+status=Complete
+time=8
+action_numbers=5
+result_numbers=3
+remarks=Sample remarks for the report
+task_type=Technical
+task_baseline=Medium
+start_time=09:00
+end_time=17:00
+cr_id=12
+task_id=TASK001
+username=pranchal
+password=1234 
